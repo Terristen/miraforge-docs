@@ -1,0 +1,188 @@
+/*
+ * Maps Forged Iron tokens onto Starlight.
+ * One appearance: dark chrome around a parchment sheet.
+ * Light and dark data-theme values are the same, and the toggle is not rendered.
+ */
+
+:root,
+:root[data-theme='light'],
+:root[data-theme='dark'] {
+  --sl-font: var(--mf-font-sans);
+  --sl-font-mono: var(--mf-font-mono);
+
+  --sl-color-white: var(--mf-ink);
+  --sl-color-gray-1: var(--mf-ink);
+  --sl-color-gray-2: var(--mf-muted);
+  --sl-color-gray-3: var(--mf-muted);
+  --sl-color-gray-4: var(--mf-border);
+  --sl-color-gray-5: var(--mf-border);
+  --sl-color-gray-6: var(--mf-surface-raised);
+  --sl-color-gray-7: var(--mf-surface);
+  --sl-color-black: var(--mf-surface);
+
+  --sl-color-accent-low: var(--mf-border);
+  --sl-color-accent: var(--mf-accent);
+  --sl-color-accent-high: var(--mf-link);
+
+  --sl-color-text: var(--mf-ink);
+  --sl-color-text-accent: var(--mf-link);
+  --sl-color-text-invert: var(--mf-prose);
+  --sl-color-bg: var(--mf-surface);
+  --sl-color-bg-nav: var(--mf-surface);
+  --sl-color-bg-sidebar: var(--mf-surface);
+  --sl-color-bg-inline-code: var(--mf-page-edge);
+  --sl-color-bg-accent: var(--mf-accent);
+  --sl-color-hairline-light: var(--mf-border);
+  --sl-color-hairline: var(--mf-border);
+  --sl-color-hairline-shade: var(--mf-border);
+
+  --sl-color-orange-low: var(--mf-page-edge);
+  --sl-color-orange: var(--mf-quote);
+  --sl-color-orange-high: var(--mf-prose);
+  --sl-color-green-low: var(--mf-page-edge);
+  --sl-color-green: var(--mf-quote);
+  --sl-color-green-high: var(--mf-prose);
+  --sl-color-blue-low: var(--mf-page-edge);
+  --sl-color-blue: var(--mf-quote);
+  --sl-color-blue-high: var(--mf-prose);
+  --sl-color-purple-low: var(--mf-page-edge);
+  --sl-color-purple: var(--mf-quote);
+  --sl-color-purple-high: var(--mf-prose);
+  --sl-color-red-low: var(--mf-page-edge);
+  --sl-color-red: var(--mf-quote);
+  --sl-color-red-high: var(--mf-prose);
+
+  --sl-text-2xs: var(--mf-font-size-footer);
+  --sl-text-xs: var(--mf-font-size-panel-title);
+  --sl-text-sm: var(--mf-font-size-chrome);
+  --sl-text-base: var(--mf-font-size-prose);
+  --sl-text-lg: var(--mf-font-size-prose);
+  --sl-text-xl: var(--mf-font-size-h2);
+  --sl-text-2xl: var(--mf-font-size-h2);
+  --sl-text-3xl: var(--mf-font-size-h1);
+  --sl-text-4xl: var(--mf-font-size-h1);
+  --sl-text-5xl: var(--mf-font-size-h1);
+  --sl-text-h1: var(--mf-font-size-h1);
+  --sl-text-h2: var(--mf-font-size-h2);
+  --sl-text-h3: var(--mf-font-size-h3);
+  --sl-text-body: var(--mf-font-size-prose);
+  --sl-line-height: 1.65;
+
+  --sl-content-width: 40rem;
+}
+
+body {
+  font-weight: var(--mf-weight);
+}
+
+.sidebar-pane .large {
+  font-family: var(--mf-font-sans);
+  font-weight: var(--mf-weight);
+  font-size: var(--mf-font-size-panel-title);
+  color: var(--mf-panel-title);
+}
+
+.sidebar-pane a {
+  font-weight: var(--mf-weight);
+  font-size: var(--mf-font-size-chrome);
+}
+
+.sidebar-pane a:hover,
+.sidebar-pane a:focus-visible {
+  color: var(--mf-ink);
+  background-color: var(--mf-nav-hover);
+}
+
+.sidebar-pane [aria-current='page'],
+.sidebar-pane [aria-current='page']:hover,
+.sidebar-pane [aria-current='page']:focus-visible {
+  font-weight: var(--mf-weight);
+  color: var(--mf-ink);
+  background-color: var(--mf-nav-selected);
+  box-shadow: inset 3px 0 0 var(--mf-accent);
+}
+
+main {
+  background: var(--mf-page);
+  color: var(--mf-prose);
+  font-family: var(--mf-font-prose);
+  font-size: var(--mf-font-size-prose);
+  font-weight: var(--mf-weight);
+  margin: 1.25rem 1rem 2rem;
+  border-radius: var(--mf-radius);
+}
+
+main :is(h1, h2, h3, h4, h5, h6) {
+  font-family: var(--mf-font-prose);
+  font-weight: var(--mf-weight);
+  color: var(--mf-prose);
+}
+
+main h1 {
+  font-size: var(--mf-font-size-h1);
+}
+
+main h2 {
+  font-size: var(--mf-font-size-h2);
+}
+
+main h3 {
+  font-size: var(--mf-font-size-h3);
+}
+
+main a {
+  color: var(--mf-prose);
+  font-weight: var(--mf-weight);
+  text-decoration: underline;
+  text-underline-offset: 0.16em;
+}
+
+main a:hover {
+  color: var(--mf-prose);
+}
+
+main strong {
+  font-weight: var(--mf-weight-bold);
+}
+
+main code {
+  font-family: var(--mf-font-mono);
+  font-size: var(--mf-font-size-source);
+  color: var(--mf-prose);
+  background: var(--mf-page-edge);
+}
+
+main .starlight-aside {
+  color: var(--mf-prose);
+  background: var(--mf-page-edge);
+  border-inline-start-color: var(--mf-quote);
+}
+
+main .starlight-aside__title,
+main .starlight-aside a {
+  color: var(--mf-prose);
+  font-weight: var(--mf-weight);
+}
+
+.coming-shot {
+  margin: 1.5rem 0;
+  padding: 0.75rem;
+  background: var(--mf-surface);
+  border-radius: var(--mf-radius);
+}
+
+.coming-shot .plate {
+  min-height: 11rem;
+  border: 1px solid var(--mf-border);
+  border-radius: var(--mf-radius);
+  background: var(--mf-surface-raised);
+}
+
+.coming-shot figcaption {
+  margin: 0.6rem 0 0;
+  font-family: var(--mf-font-sans);
+  font-size: var(--mf-font-size-chrome);
+  font-weight: var(--mf-weight);
+  color: var(--mf-ink);
+  line-height: 1.45;
+}
