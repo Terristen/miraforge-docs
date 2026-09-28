@@ -1,0 +1,35 @@
+---
+import splash from '../assets/brand/miraforge-studio-splash.jpg';
+---
+
+<a href="https://miraforge.com/" class="brand">
+  <span class="wordmark">
+    <img src={splash.src} width={splash.width} height={splash.height} alt="Miraforge Studio" />
+  </span>
+</a>
+
+<style>
+  .brand {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  .wordmark {
+    display: block;
+    width: 11.5rem;
+    aspect-ratio: 890 / 176;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .wordmark img {
+    position: absolute;
+    width: calc(1024 / 890 * 100%);
+    max-width: none;
+    height: auto;
+    left: calc(-68 / 890 * 100%);
+    top: calc(-762 / 176 * 100%);
+    mix-blend-mode: screen;
+  }
+</style>
